@@ -30,7 +30,7 @@ body{
     flex-grow: 1;
 }
 
-div.navbar {
+nav {
     width: 100vw;
     display: flex;
     flex-direction: row-reverse;
