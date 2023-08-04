@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from WebKantinAPP.views import Index, About
+from WebKantinAPP.views import Index, About, homepage
+from WebKantinAPP import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index.as_view(), name='index'),
+    path('', homepage, name='index'),
     path('about/', About.as_view(), name='about'),
+    path('signup/', views.signuppage, name='signup'),
+    path('login/', views.loginpage, name='login'),
+    path('logout/', views.logout, name='logout'),
 ]
