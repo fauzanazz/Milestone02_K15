@@ -1,3 +1,31 @@
 {% load static %}
-<nav>
+<nav class="navbar">
+        <a href="{% url 'home' %}" class="brand-logo">Milestone 15</a>
+        <div class="nav-btn-container">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'menukantin' %}">Menu</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+            {% else %}
+            {% endif %}
+        </div>
 </nav>
+
+<script>
+    var navbar = document.querySelector(".navbar");
+    
+    // Get the initial offset position of the navbar
+    var navbarOffset = navbar.offsetTop;
+    
+    // Function to add the "sticky" class to the navbar
+    function makeNavbarSticky() {
+    if (window.pageYOffset >= navbarOffset) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+    
+    // Add a scroll event listener to call the makeNavbarSticky function
+    window.addEventListener("scroll", makeNavbarSticky);
+</script>

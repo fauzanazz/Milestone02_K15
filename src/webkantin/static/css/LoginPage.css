@@ -1,0 +1,136 @@
+.container {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;    
+    padding: 0px;
+    padding-left: 200px;
+}
+
+.container2 {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;  
+}
+
+.container3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row; 
+    padding: 10px;
+}
+
+.form-control {
+    margin: 40px;
+    width: 847px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.50);
+}
+input.form-control::placeholder {
+    color: #000;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header {
+    color: #001C30;
+    font-family: 'Poppins';
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.color1 {
+    color: #000;
+    font-family: 'Poppins';
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.color2 {
+    color: #176B87;
+    font-family: 'Poppins';
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.p1 {
+    color: aqua;
+    background: red;
+    font-size: 40px;
+}
+
+
+.p2 {
+    color: black;
+    background: yellow;
+    font-size: 35px;
+}
+
+img.foto-gatau {
+    width: 500px;
+    height:500px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    margin: 70px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.login-btn {
+    margin: 10px;
+    color: #F0F8FF;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 250px;
+    height: 80px;
+    border-radius: 15px;
+    background: rgba(23, 107, 135, 0.80);
+}
+
+.register-btn {
+    margin: 10px;
+    display: flex;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 250px;
+    height: 80px;
+    border-radius: 15px;
+    border: 3px solid #000;
+}
+input[type="text"] {
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: black; /* Background color of inputted text */
+}

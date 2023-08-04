@@ -16,10 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from WebKantinAPP.views import Index, About
+from django.conf import settings
+from django.conf.urls.static import static
+from WebKantinAPP.views import Index, Profile
+from makanan.views import MenuKantin
+from account.views import login_user, register_user, logout_user
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index.as_view(), name='index'),
-    path('about/', About.as_view(), name='about'),
-]
+    path('', Index.as_view(), name='home'),
+    path('menu/', MenuKantin.as_view(), name='menukantin'),
+    path('item/<int:item_id>/', MenuKantin.item_detail, name='item_detail'),
+    path('profile/', Profile.as_view(), name='profile'),
+    path('login/', login_user, name='login'),
+    path('register/', register_user, name='register'),
+    path('logout', logout_user, name='logout'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
