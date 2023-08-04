@@ -41,11 +41,20 @@ def signuppage(request):
         pass2=request.POST.get('password2')
 
         if pass1!=pass2:
-            return HttpResponse("Please enter your password corectly!")
+            messages.add_message(request, 30, 'Please enter your password corectly!')
         else:
-            myuser = User.objects.create_user(uname,email,pass1)
-            myuser.save()
-            return redirect('login')
+            all_users = User.objects.values()
+            isExists = False
+            for i in all_users:
+                if uname == i['username']:
+                    isExists = True
+
+            if isExists:
+                messages.add_message(request,30, 'Username already exists')
+            else:
+                myuser = User.objects.create_user(uname,email,pass1)
+                myuser.save()
+                return redirect('login')
 
     return render (request, template_name='signuppage.html')
 
