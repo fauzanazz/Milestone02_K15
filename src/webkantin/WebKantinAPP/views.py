@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, HttpResponse
+from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.views import View
 
 class Index(View):
@@ -24,9 +26,9 @@ def loginpage(request):
 
         if user is not None:
             login(request, user)
-            return redirect('')
+            return redirect('index')
         else:
-            return HttpResponse("Username or Password is incorrect!")
+            messages.add_message(request, 30, 'Wrong Password or Username.')
 
     return render (request,'loginpage.html')
 
@@ -51,7 +53,3 @@ def signuppage(request):
 def homepage(request):
     # return HttpResponse("Hello world!")
     return render (request,'index.html')
-
-def Logout(request):
-    logout(request)
-    return redirect('login')

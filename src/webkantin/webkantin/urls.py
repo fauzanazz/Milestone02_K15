@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from WebKantinAPP.views import Index, About, homepage
 from WebKantinAPP import views
+from django.contrib.auth.views import LogoutView
+from webkantin import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homepage, name='index'),
+    path('home/', homepage, name='index'),
     path('about/', About.as_view(), name='about'),
     path('signup/', views.signuppage, name='signup'),
     path('login/', views.loginpage, name='login'),
-    path('logout/', views.logout, name='logout'),
+    path('', LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
 ]
