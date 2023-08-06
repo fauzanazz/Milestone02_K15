@@ -2,7 +2,7 @@
 {% load static %} 
 
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/MenuKantin.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/kantin.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -11,8 +11,8 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        {% for item in menu_items %}
-        <a href="{% url 'food_detail' kantin_name=kantin.name item_id=item.pk %}" class="col-md-6 col-lg-4">
+        {% for item in all_kantins %}
+        <a href="{% url 'kantin_detail' kantin_name=item.name %}" class="col-md-6 col-lg-4">
             <div class="card">
                 <div class="row no-gutters">
                     <div class="col-md-7">
@@ -21,7 +21,7 @@
                     <div class="col-md-4">
                         <div class="card-body">
                             <h5 class="card-title">{{ item.name }}</h5>
-                            <p class="card-text">{{ item.description }}</p>
+                            <p class="card-text">{{ item.deskripsi }}</p>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
     max-width: 500px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-color: transparent;
 }
 
 .card-img {
@@ -39,11 +39,11 @@ h5 {
 }
 p {
     color: #1B1B1B;
-font-family: 'Poppins';
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .card {

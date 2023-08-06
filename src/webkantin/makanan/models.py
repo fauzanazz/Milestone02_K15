@@ -5,13 +5,15 @@ class MenuItem(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='menu_images/')
     price = models.IntegerField()
-    category = models.ManyToManyField('Category', related_name='item')
+    NamaKantin = models.ManyToManyField('NamaKantin')
     
     def __str__(self):
         return self.name
 
-class Category(models.Model):
+class NamaKantin(models.Model):
     name = models.CharField(max_length=100)
+    deskripsi = models.TextField()
+    image = models.ImageField(upload_to='kantin_images/')
     
     def __str__(self):
         return self.name
@@ -25,7 +27,3 @@ class OrderModel(models.Model):
     
     def __str__(self):
         return f'Order: {self.created_on.strftime("%b %d %I: %M %p")}'
-
-class Profile(models.Model):
-    username = models.CharField(max_length=20)
-    password = models.CharField(max_length=20)
