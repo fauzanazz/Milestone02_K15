@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/MenuKantin.css' %}">
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="headings1">
+        <span class="color1">Menu{</span><span class="color2">Kantin}</span>
+    </h1>
+    <div class="grd-makanan-container">
+        <form method="POST">
+            {% csrf_token %}
+                {% for food in kantin_1 %}
+                <a href="{% url 'item_detail' food.pk %}" class='subgrid'>
+                    <img src="{{ food.image.url }}" alt="" class='foodimages'>
+                    <div>
+                        <h2>{{ food.name }}</h2>
+                        <p>{{ food.description }}</p>
+                        <p>{{food.price}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

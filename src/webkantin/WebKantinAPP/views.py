@@ -10,8 +10,7 @@ class Index(View):
 
     def get(self, request):
         return render(request, 'index.html')
-    
-class About(View):
+class Profile(View):
     def get(self, request):
         return render(request, 'about.html')
     

@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="headings1">Profile</h1>
+    <p class="p2">Nama</p>
+    <p class="p2">Nim</p>
+    <p class="p2">Jurusan</p>
+    <div class="buttons">
+        <a href="{% url 'home' %}" class='register-btn'>History</a>
+        <a href="{% url 'logout' %}" class='register-btn'>Logout</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

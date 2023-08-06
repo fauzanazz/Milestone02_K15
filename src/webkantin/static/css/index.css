@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;    
+    padding: 20px;
+    padding-left: 20vw;
+}
+
+.container > * {
+    max-width: 35vw;
+}
+
+.p1 {
+    color: aqua;
+    background: red;
+    font-size: 40px;
+}
+
+.headings1 {
+    font-size: 120px;
+    font-weight: 700;
+    color: black;
+    background: blue;
+}
+
+.p2 {
+    color: black;
+    background: yellow;
+    font-size: 35px;
+}
+
+div.buttons a {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
