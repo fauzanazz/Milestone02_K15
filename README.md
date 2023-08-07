@@ -2,15 +2,16 @@
 Tugas Milestone 15
 
 # Deskripsi Singkat
-Dengan mahasiswa TPB yang mulai tahun ajaran 2023/2024 ditempatkan di ITB Kampus Jatinangor. Hal ini akan menimbulkan peningkatan demand yang signifikan, terlebih mengingat jumlah kantin yang terbatas di Kampus Jatinangor. Oleh sebab itu, dibutuhkan suatu solusi yang dapat membantu mahasiswa memesan makanan dan melihat waiting time secara online dari manapun dan kapanpun sehingga dapat meminimalisir masalah ini. Solusi yang kami tawarkan adalaha sebuah website yang dapat memberikan informasi tentang operasional dari kantin-kantin yang ada di Kampus ITB Jatinangor.
+Dengan mahasiswa TPB baru yang akan memulai tahun ajaran 2023/2024 dan seluruhnya ditempatkan di ITB Kampus Jatinangor, maka hal ini akan menimbulkan peningkatan demand yang signifikan pada seluruh fasilitas kampus, terutama peningkatan demand yang besar pada kantin Kampus Jatinangor. Melihat hal tersebut, peningkatan demand yang besar tadi dapat menimbulkan berbagai masalah, misalnya massa kampus yang bingung mengenai kondisi kantin secara realtime, menu yang terdapat di kantin tersebut, menu apa saja yang ada di kantin tersebut, dan lain sebagainya. Oleh sebab itu, dibutuhkan suatu solusi yang dapat membantu mahasiswa memesan makanan dan melihat waiting time secara online dari manapun dan kapanpun sehingga dapat meminimalisir masalah ini. Solusi yang kami tawarkan adalaha sebuah website yang dapat memberikan informasi tentang operasional dari kantin-kantin yang ada di Kampus ITB Jatinangor.
 
 # Requirement Program
-asgiref==3.7.2
-typing_extensions==4.7.1
-Django==4.2.4
-pillow==10.0.0
-sqlparse==0.4.4
-tzdata==2023.3
+Berikut adalah requirements dari program yang kami buat
+* asgiref==3.7.2
+* typing_extensions==4.7.1
+* Django==4.2.4
+* pillow==10.0.0
+* sqlparse==0.4.4
+* tzdata==2023.3
 
 # Cara Penggunaan
 1. Langkah pertama yang akan dilakukan adalah membuka aplikasi terminal pada laptop
