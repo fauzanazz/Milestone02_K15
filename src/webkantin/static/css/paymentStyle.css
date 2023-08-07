@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee Spice');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body{
+    background: linear-gradient(180deg, #808EC0 0%, rgba(167.25, 162.56, 196.05, 0) 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+a{
+    background-color: transparent;
+    color: #F0F8FF;
+    font-family: Bungee;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.brand {
+    font-family: Bungee;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: #F0F8FF;
+}
+
+.container > * {
+    max-width: 35vw;
+}
+
+/*pay */
+#PayText{
+    position:absolute;
+    font-family: Bungee;
+    padding-left: 25%;
+
+
+}
+.payMethodContainer{
+    position: absolute;
+    top:27.5%;
+    left:26%;
+    width: 600px;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 5px 12px -2px rgba(0, 0, 0, 0.1),
+    0 18px 36px -6px rgba(0, 0, 0, 0.1);
+}
+
+.payMethodContainer .title{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.payMethodContainer form input{
+    display: none;
+}
+
+.payMethodContainer form .category{
+    margin-top: -50px;
+    padding-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.category label{
+    /* width: 100%; */
+    /* height: 65px; */
+    height: 145px;
+    padding: 20px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* label:nth-child(2), label:nth-child(3){
+    margin: 15px 0;
+} */
+
+
+#ovo:checked ~ .category .ovoMethod,
+#gopay:checked ~ .category .gopayMethod,
+#tunai:checked ~ .category .tunaiMethod,
+#debit:checked ~ .category .debitMethod{
+    box-shadow: 0px 0px 0px 1px #6064b6;
+}
+
+
+#ovo:checked ~ .category .ovoMethod .check,
+#gopay:checked ~ .category .gopayMethod .check,
+#debit:checked ~ .category .debitMethod .check,
+#tunai:checked ~ .category .tunaiMethod .check{
+    display: block;
+}
+
+
+label .imgName{
+    display: flex;
+    /* justify-content: space-between;
+     */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imgName span{
+    /* margin-left: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: absolute;
+    top: 72%;
+    transform: translateY(-72%);
+}
+
+.imgName .imgContainer{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 35%;
+    transform: translateY(-35%);
+}
+
+img{
+    width: 50px;
+    height: auto;
+    /*height: auto;*/
+}
+
+.ovo img{
+    width: 120px;
+    /* margin-left: 5px; */
+}
+
+.gopay img{
+    width: 100px;
+}
+
+.debit img{
+    width: 75px;
+}
+
+.tunai img{
+    width: 50px;
+}
+
+.check{
+    display: none;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}
+
+.check i{
+    font-size: 18px;
+}
+
+
+
+
+	  

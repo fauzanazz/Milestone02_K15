@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/paymentStyle.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand brand" href="{% url 'home' %}">Milestone 15</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!-- This span is necessary for the hamburger icon -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'kantin' %}">Kantin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--<div class="container-fluid vh-100 vw-100 d-flex flex-column">-->
+<!--    <p class="p1">Halo, Selamat datang</p>-->
+<!--    <h1 class="headings1">Kantin ITB</h1>-->
+<!--    <p class="p2">Pesan dimana saja dengan mudah dan nyaman</p>-->
+<!--    <div class="buttons">-->
+<!--        <a href="{% url 'logout' %}">Logout</a>-->
+<!--        <a href="{% url 'login' %}" class="login">Login</a>-->
+<!--        <a href="" class="guest">Guest</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+<div id="PayText">
+    <h1>PILIH METODE PEMBAYARAN</h1>
+</div>
+<div class="payMethodContainer">
+    <form action="#">
+        <input type="radio" name="payment" id="ovo">
+        <input type="radio" name="payment" id="gopay">
+        <input type="radio" name="payment" id="debit">
+        <input type="radio" name="payment" id="tunai">
+
+
+        <div class="category">
+            <label for="ovo" class="ovoMethod">
+                <div class="imgName">
+                    <div class="imgContainer visa">
+                        <img src="https://blogpictures.99.co/cara-menggunakan-ovo.jpg" alt="">
+                    </div>
+                    <span class="name">OVO</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="gopay" class="gopayMethod">
+                <div class="imgName">
+                    <div class="imgContainer mastercard">
+                        <img src="https://storage.googleapis.com/flip-prod-mktg-strapi/media-library/Virtual_Account_Go_Pay_1_a96fb1aedb/Virtual_Account_Go_Pay_1_a96fb1aedb.jpg" alt="">
+                    </div>
+                    <span class="name">Go Pay</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="debit" class="debitMethod">
+                <div class="imgName">
+                    <div class="imgContainer debit">
+                        <img src="https://www.nicepng.com/png/detail/392-3926074_credit-or-debit-card-visa-mastercard-logo-hd.png" alt="">
+                    </div>
+                    <span class="name">Debit</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="tunai" class="tunaiMethod">
+                <div class="imgName">
+                    <div class="imgContainer tunai">
+                        <img src="https://cdn.icon-icons.com/icons2/2356/PNG/512/pay_cash_bill_money_buy_icon_143287.png" alt="">
+                    </div>
+                    <span class="name">Tunai</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+        </div>
+    </form>
+</div>
+
+
+
+</body>
+</html>
