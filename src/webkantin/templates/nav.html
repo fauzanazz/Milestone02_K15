@@ -1,31 +1,24 @@
 {% load static %}
-<nav class="navbar">
-        <a href="{% url 'home' %}" class="brand-logo">Milestone 15</a>
-        <div class="nav-btn-container">
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'menukantin' %}">Menu</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}">Profile</a></li>
-            {% else %}
-            {% endif %}
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand brand" href="{% url 'home' %}">Milestone 15</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!-- This span is necessary for the hamburger icon -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'kantin' %}">Kantin</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
+                {% endif %}
+            </ul>
         </div>
+    </div>
 </nav>
-
-<script>
-    var navbar = document.querySelector(".navbar");
-    
-    // Get the initial offset position of the navbar
-    var navbarOffset = navbar.offsetTop;
-    
-    // Function to add the "sticky" class to the navbar
-    function makeNavbarSticky() {
-    if (window.pageYOffset >= navbarOffset) {
-            navbar.classList.add("sticky");
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-    
-    // Add a scroll event listener to call the makeNavbarSticky function
-    window.addEventListener("scroll", makeNavbarSticky);
-</script>

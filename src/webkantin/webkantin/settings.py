@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'account',
     'WebKantinAPP',
     'makanan',
+    'history',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
