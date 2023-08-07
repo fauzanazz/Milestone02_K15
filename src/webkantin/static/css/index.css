@@ -1,0 +1,44 @@
+.container > * {
+    max-width: 35vw;
+}
+
+.p1 {
+    color: #176B87;
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.headings1 {
+    color: #000;
+    font-family: 'Poppins';
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.p2 {
+    color: #000;
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+div.buttons{
+    width: 250px;
+    
+}
+div.buttons a{
+    flex-shrink: 0;
+    border-radius: 15px;
+    padding: 15px 0px;
+    background: rgba(23, 107, 135, 0.80);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+

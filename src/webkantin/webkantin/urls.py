@@ -16,10 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from WebKantinAPP.views import Index, About
+from django.conf import settings
+from django.conf.urls.static import static
+from WebKantinAPP.views import Index, Profile
+from makanan.views import AllNamaKantin, KantinDetail , FoodDetail
+from account.views import login_user, register_user, logout_user
+from WebKantinAPP import views
+from django.contrib.auth.views import LogoutView
+from webkantin import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index.as_view(), name='index'),
-    path('about/', About.as_view(), name='about'),
-]
+    path('', Index.as_view(), name='home'),
+    path('kantin/<str:kantin_name>/<int:item_id>', FoodDetail.as_view(), name='food_detail'),
+    path('kantin/<str:kantin_name>/', KantinDetail.as_view(), name='kantin_detail'),
+    path('profile/', Profile.as_view(), name='profile'),
+    path('login/', login_user, name='login'),
+    path('register/', register_user, name='register'),
+    path('logout/', logout_user, name='logout'),
+    path('kantin/', AllNamaKantin.as_view(), name='kantin' )
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

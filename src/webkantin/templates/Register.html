@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Register.css' %}">
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1><span class='header'>Kantin</span><span class='color1'> ITB</span><span class='color2'> Login</span></h1>
+    {% if form.errors %}
+    <p>Form error</p>
+    {% endif %}
+    <div class='container2'>
+        <img src="{% static 'images/Makanan 1.webp' %}" alt="" class='foto-gatau'>
+        <form action="{% url 'register' %}" method=POST>
+            {% csrf_token %}
+            <div class='container3'>
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {{ form.full_name.label_tag }}
+                {{ form.full_name }}
+                {{ form.NIM.label_tag }}
+                {{ form.NIM }}
+                {{ form.jurusan.label_tag }}
+                {{ form.jurusan }}
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                <button type="submit" class="btn btn-primary login-btn">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

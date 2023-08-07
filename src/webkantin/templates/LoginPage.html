@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/LoginPage.css' %}">
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1><span class='header'>Kantin</span><span class='color1'> ITB</span><span class='color2'> Login</span></h1>
+    <div class='container2'>
+        <img src="{% static 'images/Makanan 1.webp' %}" alt="" class='foto-gatau'>
+        <form action="" method=POST>
+            {% csrf_token %}
+                <input type="text" name="username" placeholder="Enter Username" class="form-control">
+                <input type="password" name="password" placeholder="Enter Password" class="form-control">
+            <div class='container3'>
+                <a href="{% url 'register' %}" class='register-btn'>Register</a>
+                <button type="submit" class="btn btn-primary login-btn">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}
