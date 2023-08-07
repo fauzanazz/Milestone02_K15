@@ -1,0 +1,11 @@
+.square {
+  width: 100px;
+  height: 100px;
+}
+  
+.textfamily {
+  font-family: 'Poppins', sans-serif;
+}
+.heading {
+  font-weight:700;
+}
