@@ -10,11 +10,7 @@
 
 {% block content %}
 <div class="container-fluid">
-    {% csrf_token %}
     <div class="card">
-        <h1 class="headings1">
-            <span class="color1">Menu{</span><span class="color2">{{kantin.name}}}</span>
-        </h1>
         <div class="row no-gutters flex-nowrap">
             <img src="{{ menu_item.image.url }}" alt="" class='card-img'>
             <div>
@@ -23,9 +19,23 @@
                 <p>{{menu_item.price}}</p>
             </div>
         </div>
+        <div class="form-group pt-3">
+            <form method=POST action="">
+                {% csrf_token %}
+                <div class="qty mb-5 mt-5">
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <span class="minus bg-dark">-</span>
+                    <input type="number" class="count" name="items[]" value="1">
+                    <span class="plus bg-dark">+</span>
+                </div>
+                <button class="btn btn-dark mt-5">Place Order!</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}
 
 {% block js %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'js/ItemDetail.js' %}"></script>
 {% endblock %}

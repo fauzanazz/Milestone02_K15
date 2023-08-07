@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 from WebKantinAPP.views import Index, Profile
 from makanan.views import AllNamaKantin, KantinDetail , FoodDetail
 from account.views import login_user, register_user, logout_user
+from history.views import Order
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,5 +32,6 @@ urlpatterns = [
     path('login/', login_user, name='login'),
     path('register/', register_user, name='register'),
     path('logout/', logout_user, name='logout'),
-    path('kantin/', AllNamaKantin.as_view(), name='kantin' )
+    path('kantin/', AllNamaKantin.as_view(), name='kantin' ),
+    path('order/', Order.as_view(), name='order'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
