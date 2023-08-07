@@ -1,8 +1,8 @@
-from django.db import models
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django import forms
 
-# Create your models here.
-class Account(models.Model):
+class RegisterUserForm(UserCreationForm):
     CHOICES =(
         ("1", "Teknik Informatika"),
         ("2", "Sistem dan Teknologi Informasi"),
@@ -55,10 +55,10 @@ class Account(models.Model):
         ("47", "Desain Komunikasi Visual"),
         ("48", "Desain Produk"),
     )
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    full_name = models.CharField(max_length= 52, default="")
-    NIM = models.CharField(max_length=8, default="")
-    jurusan = models.TextField(choices= CHOICES, default="")
+    full_name = forms.CharField(max_length= 52, label="Full Name", required=True)
+    NIM = forms.CharField(max_length=8, min_length=8, label="NIM", required=True)
+    jurusan = forms.ChoiceField(choices= CHOICES, label="Jurusan", required=True)
 
-    def __str__(self):
-        return self.user.username
+    class Meta:
+        model = User
+        fields = ("username","password1","password2","full_name","NIM","jurusan")
